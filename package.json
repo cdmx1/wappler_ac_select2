@@ -1,5 +1,5 @@
 {
-    "name": "dmxSelect2",
+    "name": "@roney492/wappler_ac_select2",
     "version": "1.0.0",
     "type": "module",
     "description": "App Connect extension for Select2",
