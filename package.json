@@ -1,0 +1,20 @@
+{
+    "name": "dmxSelect2",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "App Connect extension for Select2",
+    "license": "MIT",
+    "author": {
+        "name": "roney492",
+        "url": "https://github.com/roney492"
+    },
+    "keywords": [
+        "wappler-extension",
+        "app-connect",
+        "select2"
+    ],
+    "scripts": {
+        "build": "rollup --config",
+        "publish-dry-run": "npm publish ./dist --access public --dry-run"
+    }
+}
