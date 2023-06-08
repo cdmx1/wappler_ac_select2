@@ -13,8 +13,6 @@ dmx.Component("select2", {
         },
     },
     render: function (t) {
-        console.log("1");
-        console.log(this);
         (this.options = []),
             this.props.value
                 ? (this.updateValue = !0)
@@ -80,14 +78,9 @@ dmx.Component("select2", {
         }, this);
     },
     setSelectTwo: function () {
-        console.log("its here");
-        console.log(this);
-        $("#" + this.$node.id).data(
-            "placeholder",
-            this.$node.dataset.placeholder
-        );
+        $("#" + this.$node.id).data("placeholder",this.$node.dataset.placeholder);
         $("#" + this.$node.id).select2();
     },
 });
 
-//# sourceMappingURL=../maps/dmxselect2.js.map
+//# Updated on 8th june -by Adarsh Sinari

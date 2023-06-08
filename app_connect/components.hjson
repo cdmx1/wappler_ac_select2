@@ -9,7 +9,7 @@
             "icon": "fa fa-lg fa-caret-square-o-down",
             "state": "opened",
             "anyParent": true,
-            "template": "<select id=\"\" is=\"dmx-select2\" class=\"form-control select2\" >\n</select>",
+            "template": "<select id=\"\" is=\"dmx-select2\" class=\"form-select select2\" >\n</select>",
             "baseName": "select2",
             "help": "Select2 component for data display",
             "dataScheme": [
@@ -22,86 +22,7 @@
             "outputType": "object",
             "dataPick": true,
             "outputType": "object",
-            "dataScheme": [
-                {
-                    "name": "data",
-                    "title": "Data",
-                    "type": "object"
-                }
-            ],
-            "properties": [
-                {
-                    "group": "Select2 Properties",
-                    "variables": [
-                        {
-                            "name": "id",
-                            "attribute": "id",
-                            "title": "ID",
-                            "type": "text",
-                            "required": true
-                        },
-                        {
-                            "name": "name",
-                            "attribute": "name",
-                            "title": "Name",
-                            "type": "text",
-                            "required": true
-                        },
-                        {
-                            "name": "options",
-                            "attribute": "dmx-bind:options",
-                            "title": "Options",
-                            "type": "text",
-                            "dataBindings": true,
-                            "defaultValue": [],
-                            "required": true
-                        },
-                        {
-                            "name": "optionText",
-                            "attribute": "dmx-bind:optiontext",
-                            "title": "Option Text",
-                            "type": "text",
-                            "dataBindings": true,
-                            "defaultValue": [],
-                            "required": true
-                        },
-                        {
-                            "name": "optionValue",
-                            "attribute": "dmx-bind:optionvalue",
-                            "title": "Option value",
-                            "type": "text",
-                            "dataBindings": true,
-                            "defaultValue": [],
-                            "required": true
-                        },
-                        {
-                            "name": "selectedValue",
-                            "attribute": "dmx-bind:value",
-                            "title": "Selected Value",
-                            "type": "text",
-                            "dataBindings": true,
-                            "defaultValue": [],
-                            "required": true
-                        },
-                        {
-                            "name": "placeholder",
-                            "attribute": "dmx-bind:data-placeholder",
-                            "title": "Placeholder",
-                            "type": "text",
-                            "dataBindings": true,
-                            "defaultValue": [],
-                            "required": true
-                        },
-                        {
-                            "name": "disabled",
-                            "attribute": "disabled",
-                            "title": "Disabled",
-                            "type": "boolean",
-                            "defaultValue": false
-                        }
-                    ]
-                },
-            ],
+            "properties": [],
             "actionsScheme": [],
             "children": [],
             "allowed_children": {},
@@ -141,18 +62,39 @@
         }
     ],
     "attributes": [
-         {
-      "name": "data-placeholder",
+    {
+      "name": "dmx-select2-config",
       "attributeStartsWith": "dmx-bind",
       "attribute": "data-placeholder",
-      "title": "Placeholder",
-      "type": "text",
+      "title": "Select2 Placeholder",
+      "type": "boolean",
       "display": "fieldset",
-      "icon": "fa fa-lg fa-chevron-right",
+      "icon": "fa fa-lg fa-check-square",
       "groupTitle": "Select2 Config",
       "groupIcon": "fa fa-lg fa-cubes",
-      "dataBindings": true,
-      "defaultValue": ''
+      "defaultValue": false,
+      "show": [
+        "valueValue"
+      ],
+      "noChangeOnHide": true,
+      "groupEnabler": true,
+      "children": [
+        {
+          "name": "valueValue",
+          "attributeStartsWith": "dmx-bind",
+          "attribute": "data-placeholder",
+          "isValue": true,
+          "dataBindings": true,
+          "title": "Placeholder:",
+          "type": "text",
+          "help": "Edit Placeholder.",
+          "defaultValue": "",
+          "initDisplay": "none"
+        }
+      ],
+    "allowedOn": {
+        "dmx-select2": true
+      }
     }
     ],
     "events": [],
