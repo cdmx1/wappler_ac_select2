@@ -1,5 +1,5 @@
 {
-    "name": "@cdmx1/wappler_ac_select2",
+    "name": "@cdmx/wappler_ac_select2",
     "version": "1.0.2",
     "type": "module",
     "description": "App Connect extension for Select2",
