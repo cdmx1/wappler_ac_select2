@@ -63,19 +63,18 @@ dmx.Component("select2", {
         this.options.splice(0).forEach(function (t) {
             dmx.dom.remove(t);
         }),
-            this.options.push(
-                this.$node.appendChild(document.createElement("option"))
-            );
-        dmx.repeatItems(this.props.options).forEach(function (t) {
-            "object" != typeof t && (t = { $value: t });
-            var e = document.createElement("option");
-            (e.value = t.$key),
-                (e.innerText = dmx.parse(
-                    this.props.optionText,
-                    dmx.DataScope(t, this)
-                )),
+            dmx.repeatItems(this.props.options).forEach(function (t) {
+                "object" != typeof t && (t = { $value: t });
+                var e = document.createElement("option");
+                (e.value = Array.isArray(this.props.options)
+                    ? dmx.parse(this.props.optionValue, dmx.DataScope(t, this))
+                    : t.$key),
+                    (e.innerText = dmx.parse(
+                        this.props.optionText,
+                        dmx.DataScope(t, this)
+                    )),
                 this.options.push(this.$node.appendChild(e));
-        }, this);
+            }, this);
     },
     setSelectTwo: function () {
         $("#" + this.$node.id).data("placeholder",this.$node.dataset.placeholder);
