@@ -30,20 +30,11 @@
                 {
                     "src": "dmxSelect2.js",
                     "dst": "js/dmxSelect2.js"
-                },
-                {
-                    "src": "select2.js",
-                    "dst": "js/select2.js"
                 }
             ],
             "linkFiles": [
                 {
                     "src": "js/dmxSelect2.js",
-                    "type": "js",
-                    "defer": true
-                },
-                {
-                    "src": "js/select2.js",
                     "type": "js",
                     "defer": true
                 }
