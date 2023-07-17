@@ -63,6 +63,9 @@ dmx.Component("select2", {
         this.options.splice(0).forEach(function (t) {
             dmx.dom.remove(t);
         }),
+        this.options.push(
+            this.$node.appendChild(document.createElement("option"))
+        );
             dmx.repeatItems(this.props.options).forEach(function (t) {
                 "object" != typeof t && (t = { $value: t });
                 var e = document.createElement("option");
