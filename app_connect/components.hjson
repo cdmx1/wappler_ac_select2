@@ -30,6 +30,14 @@
                 {
                     "src": "dmxSelect2.js",
                     "dst": "js/dmxSelect2.js"
+                },
+                {
+                    "src": "select2.js",
+                    "dst": "js/select2.js"
+                },
+                {
+                    "src": "select2.css",
+                    "dst": "css/select2.css"
                 }
             ],
             "linkFiles": [
@@ -37,6 +45,15 @@
                     "src": "js/dmxSelect2.js",
                     "type": "js",
                     "defer": true
+                },
+                {
+                    "src": "js/select2.js",
+                    "type": "js",
+                    "defer": true
+                },
+                {
+                    "src": "css/select2.css",
+                    "type": "css"
                 }
             ],
             "cssOrder": [],
